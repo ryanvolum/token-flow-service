@@ -35,7 +35,7 @@ export class TokenFlowService {
     public listen = () => {
         this.server.listen(this.port, () => {
             console.log(`Server running on port ${this.port}`);
-            console.log(`Perform queries against tokenflow by issuing GET requests against http://localhost:${this.port}/getTokens/<QUERY>`)
+            console.log(`Perform queries against tokenflow by issuing GET requests against http://localhost:${this.port}/getTokens/<QUERY>`);
         })
     }
 
