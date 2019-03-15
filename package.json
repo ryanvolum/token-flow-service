@@ -1,0 +1,31 @@
+{
+    "name": "token-flow-service",
+    "version": "0.0.1",
+    "description": "A command-line enabled express server that exposes a service to interact with the token-flow package from anywhere",
+    "main": "app.js",
+    "scripts": {
+        "build": "node_modules/.bin/tsc --build",
+        "start": "node_modules/.bin/tsc --build && node ./lib/index.js",
+        "watch": "node_modules/.bin/nodemon --watch ./src -e ts --exec \"npm run start\"",
+        "lint": "node_modules/.bin/tslint -c tslint.json 'src/**/*.ts'",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "tokenflow": "node lib/cmd.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/debug": "^4.1.2",
+        "body-parser": "^1.18.3",
+        "commander": "^2.19.0",
+        "express": "^4.16.4",
+        "fs": "0.0.1-security",
+        "nodemon": "^1.18.10",
+        "token-flow": "0.0.26"
+    },
+    "devDependencies": {
+        "@types/node": "^11.11.3"
+    },
+    "bin": {
+        "tokenflow": "./lib/cmd.js"
+    }
+}
